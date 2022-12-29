@@ -1,10 +1,15 @@
-export const UnaNota = ({id,title, content}) =>{
-    return (
-        <div>
-            <li>{id}</li>
-            <h3>{title}</h3>
-            <p>{content}</p>
+import { Link } from 'react-router-dom'
 
-        </div>
-    )
+export const UnaNota = ({ id, title, content }) => {
+  return (
+    <div>
+      <li>{id}</li>
+      <Link to={`/notes/${id}`}>
+        {' '}
+        <h3>{title}</h3>
+      </Link>
+      <p>{content}</p>
+    </div>
+  )
 }
+ 

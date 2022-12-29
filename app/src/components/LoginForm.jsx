@@ -5,19 +5,20 @@ export default function LoginForm({ handleSubmit, ...props }) {
   return (
     <Togglable buttonLabel='LOGUEATE'>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div id='usernameLogin' className='form-group'>
           <input
-            className='form_login'
+            className='form-control'
             type='text'
             value={props.username}
             name='Username'
-            placeholder='Username'
+            placeholder='Your username'
             onChange={props.handleUsernameChange}
+            w
           />
         </div>
-        <div>
+        <div id='passwordLogin' className='form-group'>
           <input
-            className='form_login'
+            className='form-control'
             type='password'
             value={props.password}
             name='Password'
@@ -25,13 +26,13 @@ export default function LoginForm({ handleSubmit, ...props }) {
             onChange={props.handlePasswordChange}
           />
         </div>
-        <button>LOGIN</button>
+        <button className='btn btn-danger mt-2 mb-2'>LOGIN</button>
       </form>
     </Togglable>
   )
 }
-LoginForm.prototype={
+// para documentar al momento de hacer el test sea ma facilidentificarl
+LoginForm.prototype = {
   handleSubmit: PropTypes.func.isRequired,
-  username:PropTypes.string
-
+  username: PropTypes.string,
 }

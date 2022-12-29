@@ -12,6 +12,7 @@
     "build": "npm run build --workspace=app",
     "lint": "eslint ./api ./app",
     "start": "npm run start --workspace=api",
+    "start:app": "react-scripts start --workspace=app",
     "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "eslintConfig": {
